@@ -2,7 +2,7 @@
 import requests
 
 URL = "https://api.fda.gov/drug/drugsfda.json"
-params = {"search": 'openfda.generic_name.exact:"TERBINAFINE"', "limit": 1}
+params = {"search": 'openfda.generic_name:"TERBINAFINE"', "limit": 1}
 
 r = requests.get(URL, params=params, timeout=20)
 if r.status_code == 404:
